@@ -1,0 +1,31 @@
+// place your custom styles here
+@font-face{ /* 引入字体 */
+  font-family: mao;
+  src: url("/mao.ttf");
+}
+/* 首页标题文字 */
+html body div#app div.theme-container.no-sidebar div.page.blog div.blog-hero.fullscreen h1{
+  padding-top: 30%;
+  font-size:3.5rem;
+  color: #ffffff;
+  font-weight: bolder;
+  text-shadow: -1px 0 #38333b, 0 1px #38333b,
+  1px 0 #38333b, 0 -1px #38333b
+}
+html body div#app div.theme-container.no-sidebar div.page.blog div.blog-hero.fullscreen p{
+  font-size:2rem;
+  color: #ffffff;
+  font-weight: bolder;
+  text-shadow: -1px 0 #38333b, 0 1px #38333b,
+  1px 0 #38333b, 0 -1px #38333b
+}
+:root{ /* 所有页面的宽度加宽原来750 */
+  --content-width: 880px;
+}
+
+/* 去掉大标题，需要放在对应页面的md中生效 */
+/*
+<style type="text/css">
+    html body div.page-title { display: none}
+</style>
+ */
