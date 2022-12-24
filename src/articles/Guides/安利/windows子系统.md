@@ -140,6 +140,9 @@ ws.run "ubuntu1804 run sudo /etc/init.wsl start", vbhide
 :::
 
 ## OhMyZSH
+
+^7ab766
+
 ^dddc45
 这是一个好用的shell命令行有很多插件。（确定不是因为好看才装的？  
 ### 安装ZHS和oh my zsh

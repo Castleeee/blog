@@ -1,7 +1,6 @@
 ---
 title: 一些想法
 date: 2019-11-1 17:09:05
-subSidebar: false
 category: 随笔
 ---
 ## 一些想法

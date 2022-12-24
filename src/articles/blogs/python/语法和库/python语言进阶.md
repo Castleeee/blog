@@ -151,12 +151,12 @@ except ModuleNotFoundError:
     import other_2 as o # 没1导2
 
 ```
-![800](./static/python语言进阶-images-1.png)<br/>
+![800](./static/python语言进阶_images_1.png)<br/>
 [^1]
 
 #### 循环导入
 
-![](./static/python语言进阶-images-2.png)
+![](./static/python语言进阶_images_2.png)
 此时`from test2 import c`报错 ，先引用test之后就不会了  
 1.  引用`test2/c`模块
 2.  由于是第一次引用`test2/c`模块，此时会执行`test2/c.py`文件，此时会执行`from test import a`
@@ -256,7 +256,7 @@ type类生成了class，class生成了对象，`type->class->otherObject`
 
 `object`是所有类都要继承的顶层基类，`class Class()`后面括号不写东西默认继承顶层基类 ps现在加不加都一样但是有些人的代码会有所区分，因为py2中是不一样  
 
-![](./static/python语言进阶-images-3.png)
+![](./static/python语言进阶_images_3.png)
 
 ::: info 📝Note
 **type和object的关系**<br/>`type`本身既是类又是对象，`type`继承自`object`  
@@ -299,7 +299,7 @@ C3算法实现了三种重要特性：
 -   保证单调性原则（即子类不改变父类的方法搜索顺序）。
 
 类的`__mro__`属性或`mro()`方法可以直接查看搜索顺序，C3会按照多继承的参数顺序进行搜索。三角继承会直接报错无法进行mro
-![|700](./static/python语言进阶-images-4.png)
+![|700](./static/python语言进阶_images_4.png)
 
 ### 构造析构
 #### 实例方法
@@ -1214,7 +1214,7 @@ None在python启动解释器的时候，会使用None class声明一个None，�
     - `math.floor(float)`向下取整
     - `math.ceil(float) `向上取整
 - `float/int->bool` 0为假1为真,虚数必须是0+0i是False，None是False
-![800](./static/python语言进阶-images-5.png)
+![800](./static/python语言进阶_images_5.png)
 - `str->other` 
     - 直接转换会挨个字符转，符合形状的用`list(eval(String))`
     - 所有类型转`str(other)`都是直接打印
@@ -1275,7 +1275,7 @@ del本质上调用的是`__del__`删除的,可以重载比如删除时释放资�
 `collectios.abc`里查看各种类型实现了什么协议  
 比如序列实现的ABC是  
 
-![](./static/python语言进阶-images-6.svg)
+![](./static/python语言进阶_images_6.svg)
 #### 序列+=和+
 +不会改变原序列，而+=是就地加，无返回值直接加进原来的  
 +必须为两个list相加，而+=后面可以是任意的序列  
@@ -1368,7 +1368,7 @@ array只能存放指定类型的数组，申请时先指定好类型
 ## Mapping类型
 ### 字典
 #### ABC和日常用法
-![](./static/python语言进阶-images-7.svg)  
+![](./static/python语言进阶_images_7.svg)  
 点进源码看有哪些方法，先列几个  
 
 - `fromkeys(iterable,value)`
@@ -1746,11 +1746,11 @@ bar
 foo
 ```
 :::
-![](./static/python语言进阶-images-8.png)
+![](./static/python语言进阶_images_8.png)
 
 #### 生成器原理
 生成器正是利用了函数是存放在堆这一特性实现的，解释器找到yield就标记函数为生成器对象  
-![](./static/python语言进阶-images-9.png)
+![](./static/python语言进阶_images_9.png)
 PyFrameObject会记录最近执行的代码和变量，以此可以用yield来暂停函数  
 实际上UserList就是利用yield实现的在collections.abc的Sequence可看源码  
 
@@ -1979,7 +1979,7 @@ WebSocket是保证只要在服务端和客户端建立连接后任何一端发�
 
 socket编程比较固定，流程各个语言中都通用，先bind->listen->accept->阻塞等待tcp->传输->关闭  
 
-![](./static/python语言进阶-images-10.png)
+![](./static/python语言进阶_images_10.png)
  
 `socket.socket(通信类型,对应协议)`  
 通信类型常用的:  
@@ -2463,7 +2463,7 @@ Product : 841
 ```
 :::
 
-![](./static/python语言进阶-images-11.png)
+![](./static/python语言进阶_images_11.png)
 
 #### Semaphore信号量
 其实就是数量锁，还有剩余就获取一个开整，没锁就停着  
@@ -3449,7 +3449,7 @@ cancel task
 ```
 :::
 嵌套协程代码在上面，返回顺序是这样的，可以看到第子协程的返回值是什么时候到达上一级的  
-![](./static/python语言进阶-images-12.png)
+![](./static/python语言进阶_images_12.png)
 
 - 使用`loop.call_soon(func, arg)`是等待loop下一个循环到来的时候立即执行
     - `loop.call_soon_threadsafe(func, arg)`是线程安全方法
@@ -3489,7 +3489,7 @@ aiohttp可以用来写高并发爬虫，其实也不用那么高并发 ，但是
 - 把example-1元类实现ORM修改为aiomysql异步的ORM并使用
     - 只需要修改save函数的保存部分，甚至可以封装一下
 - 调试
-![500|](./static/python语言进阶-images-13.png)
+![500|](./static/python语言进阶_images_13.png)
 ::: details Click to see more
 **简略版异步高并发爬虫**<br/>
 ```python
@@ -3633,7 +3633,7 @@ add: 1190000022513280
 | `NOTSET` 0                   |                                                                      |
 
 
-![python log模块的工作过程](./static/python语言进阶-images-14.png)  
+![python log模块的工作过程](./static/python语言进阶_images_14.png)  
 - 先行配置根记录器basicConfig()会做以下两件事：
     1.  添加默认的处理器(handler)
     2.  添加默认的格式化器（formatter）  

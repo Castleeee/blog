@@ -114,7 +114,7 @@ hotkey（[key1，key2，key3]）模拟按顺序按下给定键字符串，然后
 
 screenshot() 返回屏幕快照的 Image 对象（参见第 17 章关于 Image 对象的信息）。    
 
-![|700](./static/py自动化办公-images-1.png)
+![|700](./static/py自动化办公_images_1.png)
 
 ::: danger ⚡️Danger
 pyautogui并不能输入中文,他的输入只能模拟某个按键

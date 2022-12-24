@@ -32,7 +32,7 @@ unix 一开始用汇编，理念是保持高效和简洁，汇编复杂开发越
 
 unix一开始小范围内是开源的，但是商业化开发时候选择付费。  
 - unix的变种:BSD,Solaris,IBM-AIX,HP-UX,主要用在单个大型服务器，对硬件依赖严重，在分布时代逐渐不行。
-- 唯一比较强的是[BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)->FreeBSD->darwin->macOS，FreeBSD因为版权问题发布比较晚,遵循BSD协议，对商业化更友好见[开源协议](../代码之外/开源协议.md#^4fd49b)
+- 唯一比较强的是[BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)->FreeBSD->darwin->macOS，FreeBSD因为版权问题发布比较晚,遵循BSD协议，对商业化更友好见  [开源协议](/blogs/代码之外/开源协议.md#^4fd49b)
 ### linux的过程
 因为一般人用不起unix也没见过，为了方便研究荷兰教授Andrew Tanenbaum(大黑书计算机网络作者)写了不包含版权代码的类似unix的系统->minix开放源代码->linus觉得不好用，干脆重写->写了Linux  
 

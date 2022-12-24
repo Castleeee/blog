@@ -62,7 +62,7 @@ source /etc/environment # 启用
 ```
 改一下ssh端口，root下有个snap作者一直不修复[^2]
 ## 装OhMyZSH
-把[这个](../Guides/安利/windows子系统.md#^dddc45)重组搬过来了  
+把[这个](../Guides/安利/windows子系统.md#^7ab766)重组搬过来了  
 安装zsh切换默认
 ```bash
 # yum install -y zsh
@@ -126,13 +126,6 @@ compose文件都起好了，安装然后就行了
 | 8008:host     | nps的http                   |
 | 8009:host     | nps的https                  |
 | 8010          | webhook穿透到群辉的相同端口 |
-| 8011:5212     | cloudreve 的web页面&nbsp;   |
-| 8012:6800     | aria2主端口                 |
-| 8013:6888     | aria2占用                   |
-| 8013:6888/udp | aria2占用                   |
-| 8014          | nas面板群辉5000             |
-| 8015          | nas emby 8096               |
-| 8016              |    Mrdoc 觅思文当 10086                         |
 | 9443:9443     | portainer不知道干什么的端口 |
 | 22233         | ssh                         |
 
@@ -166,24 +159,17 @@ compose文件都起好了，安装然后就行了
     - 端口 8006web端口 8007桥接client bridge代理 8008http 8009https[^8]
     - 域名 nps \*.nps 
 - webhook
+    - 域名blogupdate
     - 端口 8010
     - 目前用来自动拉取博客，以后可能会有更大作用
     - url列表
         - `/BlogUpdate` 自动拉取并部署博客
     - 部署flask[^11]，测试完毕后就上线，做好备份。进入receiveWebHooks直接`nohup python receiveHook.py > flask.log 2>&1 &`。不会有人闲着没事攻击我的webhook吧，就算是攻击反正也是返回字符串，应该顶得住。
     - 顶不住了，小身板编译都费劲，以后移到群辉[^15]
-- cloudreve+aria2
-    - 端口8011
-    - 参考了[^16]docker镜像[^17]
-    - 首次启动后请执行 `docker logs -f cloudreve` 获取初始密码；
-    - 两年刷新一次
-    - aria2离线下载
 - 自建邮件docker[^14]，不安全
+    - 域名smtp
     - 端口8001:25
     - 只有一个SMTP功能，没有任何安全校验，注意发出去大概率会被认为是垃圾邮件，反正我自己用，添加白名单就行.
-- 觅思文当协作
-    - 端口8016:10086
-    - 域名md.
 - 群辉以后要有的
     - Yapi
     - 邮件服务器-穿
