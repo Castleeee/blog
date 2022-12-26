@@ -5,13 +5,14 @@ prev: false
 next: false  
 category:
 - 大数据🐘
+- clickhouse
 tag:
 - clickhouse
+- 大数据🐘
 ---
 
 <!-- more -->
-````toc
-:::
+[[toc]]
 <div align="center"><h1><strong> clickhouse-1</strong></h1></div>
 
 定位是OLAP离线处理,真列式存储数据库，没列一个文件，使用场景数据量很大，单次导入分析，查询多响应快修改少。  

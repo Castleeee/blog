@@ -12,7 +12,8 @@ comment: false
 ## 博客的写作
 安装helloworld什么的我就不多说了，文档上很齐全，照着来就是了。  
 ::: danger ⚡️Danger
-**吸取教训**<br/>一定要留下各个平台的node_modules，以免几年之后项目跑不起来了，留下M1的，x86windows的和x86windows的，存onedrive，存的时候验证可用性
+**吸取教训**<br/>
+一定要留下各个平台的node_modules，以免几年之后项目跑不起来了，留下M1的，x86windows的和x86windows的，存onedrive，存的时候验证可用性
 :::
 
 ### metadata信息 

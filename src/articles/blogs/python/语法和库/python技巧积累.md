@@ -1,7 +1,8 @@
 ---
 title: python技巧积累
 date: 2022-05-25 09:42:46
-pageClass: custom-series-page-class
+prev: ./python技巧积累.md  
+next: false
 category:
 - python🐍
 tag:
@@ -11,8 +12,7 @@ tag:
 积累一些技巧，比如读写超大文件这种小技巧
 :::
 <!-- more -->
-````toc
-:::
+[[toc]]
 <div align="center"><h1><strong> python技巧积累</strong></h1></div>
 
 🕊[python 进阶技能_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QE411u7vK)  
@@ -22,6 +22,7 @@ tag:
 类中的一些函数没有返回值的时候，可以返回self使用方法链，如果是不修改自身实例，返回一个新的，可以使用type创建新实例使用方法链  
 ::: details Click to see more
 **链式调用**<br/>
+
 ```python
 class Player:  
     def __init__(self,name,x,y):  

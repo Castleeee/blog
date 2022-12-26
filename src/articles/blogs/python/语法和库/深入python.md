@@ -1,7 +1,8 @@
 ---
 title: 深入python
 date: 2022-05-23 09:46:14
-pageClass: custom-series-page-class
+prev: ./py踩坑记录.md  
+next: ./python技巧积累.md
 category:
 - python🐍
 tag:

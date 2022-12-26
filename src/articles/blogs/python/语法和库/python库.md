@@ -1,7 +1,7 @@
 ---
 title: python库
 date: 2022-05-18 10:16:08
-prev: ./python语言进阶.md  
+prev: ./python语言进阶.md
 next: ./py踩坑记录.md
 category:
 - python🐍
@@ -10,8 +10,9 @@ tag:
 ---
 
 <!-- more -->
-````toc
-:::
+
+[[toc]]
+
 <div align="center"><h1><strong> python库</strong></h1></div>
 
 ## collections

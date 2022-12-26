@@ -112,7 +112,8 @@ comment: false
 ## 一些示例 
 ::: info 📝Note
 
-**CSS**<br/>我能吞下玻璃而不伤身体  
+**CSS**<br/>
+我能吞下玻璃而不伤身体  
 I can eat glass, it does not hurt me
 :::
 [dataview的教程](https://zhuanlan.zhihu.com/p/393550306)<br/>

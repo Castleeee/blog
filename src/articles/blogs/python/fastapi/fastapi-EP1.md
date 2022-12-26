@@ -4,10 +4,10 @@ date: 2022-12-08 13:36:13
 order: 1
 category:
 - python🐍
-- django
+- fastAPI⚡
 tag:
 - python🐍
-- django
+- fastAPI⚡
 ---
 
 占位

@@ -13,8 +13,7 @@ tag:
 配合廖学峰和python文档快速熟悉知识
 <!-- more -->
 
-````toc
-:::
+[[toc]]
 
 <div align="center"><h1><strong> python快速复习</strong></h1></div>
 

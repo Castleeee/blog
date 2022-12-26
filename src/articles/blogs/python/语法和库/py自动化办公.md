@@ -1,7 +1,8 @@
 ---
-title: 自动办公
+title: 自动化办公
 date: 2019-1-1 20:37:45
-pageClass: custom-series-page-class
+prev: ./深入python.md  
+next: ./py自动化办公.md
 category:
 - python🐍
 tag:

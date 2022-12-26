@@ -14,8 +14,7 @@ python的进阶提高，波比很经典的课了，配合[cookbook](https://pyth
 写的可能会很长
 :::
 <!-- more -->
-````toc
-:::
+[[toc]]
 <div align="center"><h1><strong> python语言进阶</strong></h1></div>
 动态语言只有在运行的时候才能发现错误，这是固有缺点  
 
@@ -34,6 +33,7 @@ Python的创始人为Guido van Rossum。1989年圣诞节期间，在阿姆斯特
 
 ::: tip 🎉Success
 **python之禅**<br/>
+
 写pythonic的代码
 
 ```
@@ -259,7 +259,8 @@ type类生成了class，class生成了对象，`type->class->otherObject`
 ![](./static/python语言进阶_images_3.png)
 
 ::: info 📝Note
-**type和object的关系**<br/>`type`本身既是类又是对象，`type`继承自`object`  
+**type和object的关系**<br/>
+`type`本身既是类又是对象，`type`继承自`object`  
 `object.__base__`返回是()空,而`type(object)`是`type`类型 
   
 上图中很奇怪的点，也就是python中有两个神同时纠缠出现  
@@ -928,6 +929,7 @@ delete。。。
     - 优先级不如类高，注意下面说明顺序
 ::: info 📄Info
 **描述符查找过程**<br/>
+
 ```python
 user.age等价于getattr(user,’age’)
 
@@ -967,6 +969,7 @@ else : 抛出AttributeError
 这种创建类的类就是元类，`type`是一种元类，继承type之后就可以创建一个特殊的类(其他都继承自object): 元类，利用创建类时的**metaclass**参数就可以控制类的生成过程，可以注入很多东西   
 ::: details Click to see more
 **type生成**<br/>
+
 ```python
 class BaseClass:  
     def echo(self):  
@@ -1034,6 +1037,7 @@ new的参数arg`def __new__(cls,  name类名, bases父类, attrs属性们, **kwa
 
 ::: details Click to see more
 **元类实现ORM**<br/>
+
 ```python
 import numbers  
 
@@ -1285,6 +1289,7 @@ del本质上调用的是`__del__`删除的,可以重载比如删除时释放资�
 #### 切片
 ::: details Click to see more
 **用法复习**<br/>
+
 ```python
 #模式[start:end:step]
 """
@@ -1393,6 +1398,7 @@ array只能存放指定类型的数组，申请时先指定好类型
 
 ::: warning ❓Question
 **userdict源码**<br/>
+
 ```python
 # userdict源码
 def __getitem__(self, key):  
@@ -1520,6 +1526,7 @@ add_path('./')
 -   一个闭包实例对其自由变量的修改会被传递到下一次该闭包实例的调用。
 ::: details Click to see more
 **闭包的自由变量**<br/>
+
 ```python
 def outer_func():  
     loc_list = []  
@@ -1556,6 +1563,7 @@ clo_func_1 loc_list = [1, 2]
 python闭包中引用的自由变量实际存放在一个Cell对象中，当自由变元被闭包引用时，便将Cell中存放的自由变量的引用放入栈顶。  
 ::: details Click to see more
 **闭包使用循环中变量的例子**<br/>
+
 ```python
 def my_func(*args):  
     fs = []  
@@ -1717,6 +1725,7 @@ list推导式应该是先确定大小，再开辟内存，所以快，for循环�
 静态语言中函数是存放在栈内存中的，调用完就会销毁。
 ::: details Click to see more
 **不用掌握,知道就行**<br/>
+
 ```python
 import inspect # 查看栈帧的包  
 frame = None  
@@ -1764,6 +1773,7 @@ range()返回的是一个list对象，而xrange返回的是一个生成器对象
 
 ::: details Click to see more
 **大文件读取**<br/>
+
 ```python
 def read_large_line(uri):  
     buffer="" # 变量缓冲字符串  
@@ -1873,6 +1883,7 @@ yy what?
 
 ::: details Click to see more
 **PEP380代码yield from翻译讲解**<br/>
+
 ```python
 #pep380  
   
@@ -1995,6 +2006,7 @@ socket编程比较固定，流程各个语言中都通用，先bind->listen->acc
 继承关系 requests->urlib->socket 
 ::: info 📝Note
 **socket最基本的函数使用**<br/>
+
 ```python
 #----server----
 import socket  
@@ -2027,6 +2039,7 @@ client: hello cc
 :::
 ::: details Click to see more
 **多线程处理多client**<br/>
+
 ```python
 import socket  
 import threading  
@@ -2057,6 +2070,7 @@ while True: # 循环每个客户端一个线程
 :::
 ::: details Click to see more
 **socket模拟http**<br/>
+
 ```python
 import socket  
 from urllib.parse import urlparse  
@@ -2142,6 +2156,7 @@ Python内部对变量或数据对象使用了**引用计数器**,我们通过计
 注意基本API的使用，原生和继承效果是一样的，继承需要实现它的`run`方法  
 ::: details Click to see more
 **原生多线程和继承线程类**<br/>
+
 ```python
 import time  
 import threading  
@@ -2216,6 +2231,7 @@ put和get都是可以通过参数设置超时时间和是否阻塞的，用到�
 
 ::: details Click to see more
 **使用线程安全队列的生产消费者模型**<br/>
+
 ```python
 import queue  
 import random  
@@ -2356,7 +2372,8 @@ condition有两层锁，一把Rlock和一个waiters双端队列，用Rlock锁定
 
 1个生产者，3个消费者,空了喊来生产，满了喊他消费  
 ::: warning Warning
-**一定要注意**<br/>注意消费者的sleep如果在cond里面，会直接把锁锁住，不能release就会跟单线程一样的效果一个吃完了再吃  
+**一定要注意**<br/>
+注意消费者的sleep如果在cond里面，会直接把锁锁住，不能release就会跟单线程一样的效果一个吃完了再吃  
 多线程中不要阻塞锁  
 考虑好cond的位置:  
 谁运行谁有R，谁阻塞谁重锁  
@@ -2369,6 +2386,7 @@ R保证安全，waiter用来卡住
 :::
 ::: details Click to see more
 **使用条件变量的生产消费者模型**<br/>
+
 ```python
 from threading import Condition  
 import queue  
@@ -2474,6 +2492,7 @@ Product : 841
 
 ::: details Click to see more
 **信号量实现控制多消费者并发数量**<br/>
+
 ```python
 from threading import Semaphore  
 import queue  
@@ -2874,6 +2893,7 @@ Process  3.000000e+00nd
 
 ::: details Click to see more
 **两个进程的Pipe和Queue测试**<br/>
+
 ```python
 import time  
 import multiprocessing  
@@ -2920,6 +2940,7 @@ if __name__ == '__main__':
 
 ::: details Click to see more
 **Manager进程池通信+继承Process类**<br/>
+
 ```python
 # -*-coding:utf-8-*-  
 import multiprocessing  
@@ -3028,6 +3049,7 @@ C10M问题，如何利用 8 核心 CPU,64G 内存，在 10gbps 的网络上保�
 
 ::: details Click to see more
 **使用非阻塞IO进行socket**<br/>
+
 ```python
   
 import socket  
@@ -3098,6 +3120,7 @@ python中直接使用select不多，都是用selector内部它也是select实现
 
 ::: details Click to see more
 **教程给的代码，以后再改吧**<br/>
+
 ```python
 #1. epoll并不代表一定比select好  
 # 在并发高的情况下，连接活跃度不是很高， epoll比select  
@@ -3262,6 +3285,7 @@ Task 核心作用是**在事件循环中添加多个并发任务**；
 
 ::: details Click to see more
 **asyncio的基本用法**<br/>
+
 ```python
 # -*-coding:utf-8-*-  
 import asyncio  
@@ -3375,6 +3399,7 @@ loop 阶段有两个方法，一个是`run_until_complete`,一个是`run_forever
 `asyncio.all_tasks(loop)`注意新版的获取所有任务需要传入loop  
 ::: details Click to see more
 **取消task**<br/>
+
 ```python
 # -*-coding:utf-8-*-  
 import asyncio  
@@ -3492,6 +3517,7 @@ aiohttp可以用来写高并发爬虫，其实也不用那么高并发 ，但是
 ![500|](./static/python语言进阶_images_13.png)
 ::: details Click to see more
 **简略版异步高并发爬虫**<br/>
+
 ```python
 # -*-coding:utf-8-*-  
 import time  

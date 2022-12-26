@@ -10,12 +10,12 @@ tagline:  生命不息，代码不止
 projects:
   - icon: project
     name: 别急
-    desc: 你先别急
+    desc: 我知道你很急，但是你先别急。
     link: /articles/Guides/
 
   - icon: article
     name: About Me ->
-    desc: 你先别急
+    desc: 别急好吗?
     link: /articles/Guides/
 
   - icon: book

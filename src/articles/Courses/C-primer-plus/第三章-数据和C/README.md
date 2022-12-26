@@ -1,6 +1,8 @@
 ---
 title: 第三章 数据和C
 date: 2022-04-18 5:49:03
+category: 
+- 课程
 dir:
     order: 3
 ---

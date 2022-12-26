@@ -16,5 +16,6 @@ export const enSidebar = sidebar({ // todo python脚本生成Course下的和指�
 "/articles/blogs/刷算法/":"structure",
 "/articles/blogs/大数据/clickhouse/":"structure",
 "/articles/blogs/python/爬虫/":"structure",
+"/articles/blogs/python/fastapi/":"structure",
 
 })

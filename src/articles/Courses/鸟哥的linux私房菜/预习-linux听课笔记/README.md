@@ -1,6 +1,8 @@
 ---
 title: part 1 linux的历史节点
 date: 2022-04-29 14:10:10
+category: 
+- 课程
 dir:
     order: 1
     text: 预习 linux听课笔记
@@ -227,6 +229,7 @@ shutdown now立刻关机
 shutdown +数字 多少分钟之后关机;+00:00今天几点关机;-h 几小时后关机
 ::: note quote
 **man shutdown的一部分看看**<br/>
+
 ```
 
 OPTIONS

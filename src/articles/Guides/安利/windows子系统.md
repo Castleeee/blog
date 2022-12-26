@@ -1,7 +1,8 @@
 ---
 title: windows子系统WSL
 date: 2019-5-14 14:59:05
-category: 工具安利
+category: 
+- 工具安利
 tag:
 - linux🐧
 ---
