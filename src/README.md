@@ -11,7 +11,7 @@ projects:
   - icon: project
     name: 别急
     desc: 我知道你很急，但是你先别急。
-    link: /articles/README/站点地图
+    link: /articles/README/站点地图.md
 
   - icon: article
     name: About Me ->
