@@ -9,7 +9,7 @@ tag:
 
 <!-- more -->
 
-<div align="center"><h1><strong> leetcode-EP1</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> leetcode-EP1</strong></h2></div>
 
 
 ## leetcode-EP1

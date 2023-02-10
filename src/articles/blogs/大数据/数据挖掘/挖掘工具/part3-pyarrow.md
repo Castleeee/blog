@@ -10,7 +10,7 @@ tag:
 ---
 
 <!-- more -->
-<div align="center"><h1><strong> part3-pyarrow</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> part3-pyarrow</strong></h2></div>
 
 ::: info 📄Info
 以前没接触过这个，pandas和numpy倒是用过  

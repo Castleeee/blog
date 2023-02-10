@@ -5,6 +5,7 @@ date: 2022-02-09 19:24:45
 order: 1
 sticky: 9  
 
+pageInfo: false  
 breadcrumb: false  
 editLink: false  
 prev: false
@@ -12,9 +13,6 @@ next: false
 comment: false
 ---
 
-<style type="text/css">  
-html body div.page-title { display: none}  
-</style>
 <br/><br/><br/>
   
 <div align="center" style="width: 90%;padding-left: 6%; ">  

@@ -63,6 +63,7 @@ export default hopeTheme({
       // Youtube: "https://example.com",
       // Zhihu: "https://example.com",
 
+
     },
   },
 
@@ -127,6 +128,7 @@ export default hopeTheme({
     blog: {
       autoExcerpt: false,
     },
+      feed:{rss:true},
 
     // If you don’t need comment feature, you can remove following option
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
@@ -137,9 +139,9 @@ export default hopeTheme({
        */
       provider: "Giscus",
       repo: "Castleeee/talkandcomment",
-      repoId: "",
+      repoId: "MDEwOlJlcG9zaXRvcnkyNDE4MjMwMjg=",
       category: "General",
-      categoryId: "",
+      categoryId: "DIC_kwDODmntNM4CS7yx",
 
       /**
        * Using Twikoo

@@ -11,14 +11,11 @@ editLink: false
 comment: false
 ---
 
-<style type="text/css">  
-html body div.page-title { display: none}  
-</style>
 
 <br/>
 
 ![](./static/FilmBookReview_images_1.png)
-<div align="center"><h1><strong>书评和影评</strong></h1></div>  
+<div align="center" style="font-size:1.4em;"><h2><strong>书评和影评</strong></h2></div>  
 认真的读书和电影实际上是很个人化的体验，能有共鸣的人很难找。  
 打算多读一些俄国文学吧，感觉更靠近人的灵魂  
 这里放的都是不严肃的书评和影评，本身自己就是门外汉，不过这并不能成为不去审美的理由，重在体验和感悟   

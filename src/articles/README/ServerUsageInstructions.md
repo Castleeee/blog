@@ -9,7 +9,7 @@ comment: false
 折腾死我了，服务器资源利用的差不多了，踩好多坑。
 :::
 <!-- more -->
-<div align="center"><h1><strong> ServerUsageInstructions</strong></h1></div>
+ 
 
 ## 安装基础的软件
 记录一下主服务器的常驻服务，比如什么nginx，博客，docker，gitea之类的。  
@@ -40,6 +40,8 @@ apt-get upgrade
 ```
 - 基本的软件：`apt-get install -y wget vim tree net-tools supervisor gcc  sl curl  neofetch`
 - 一些依赖`apt-get install -y tk perl cpio asciidoc xmlto build-essential libpcre3-dev libssl-dev sqlite3`  
+- Centos基本的软件和依赖：`yum install -y yum-utils wget vim tree net-tools supervisor crontabs gcc  sl  neofetch curl openssl neofetch tk zlib-devel openssl-devel perl cpio expat-devel gettext-devel asciidoc xmlto util-linux-user` 
+
 git安装最新版[^1]
 ```bash
 sudo add-apt-repository ppa:git-core/ppa

@@ -10,7 +10,7 @@ order: 1
 
 [[toc]]
 
-<div align="center"><h1><strong> Sql必知必会</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> Sql必知必会</strong></h2></div>
 
 
 

@@ -15,7 +15,7 @@ tag:
 
 [[toc]]
 
-<div align="center"><h1><strong> python快速复习</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> python快速复习</strong></h2></div>
 
 ## 一些资料
 - [官方文档#第三方包](https://docs.python.org/zh-cn/3/library/index.html)

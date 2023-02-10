@@ -10,7 +10,7 @@ tag:
 ---
 
 <!-- more -->
-<div align="center"><h1><strong> part2-pandas</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> part2-pandas</strong></h2></div>
 
 
 ## 使用pandas发现周期行为

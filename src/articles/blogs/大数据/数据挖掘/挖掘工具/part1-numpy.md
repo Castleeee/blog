@@ -10,7 +10,7 @@ tag:
 ---
 
 <!-- more -->
-<div align="center"><h1><strong> part1-numpy</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> part1-numpy</strong></h2></div>
 
 
 [如何基于连续索引拆分数据帧？ |](https://qa.1r1g.com/sf/ask/3938013061/) pd里面也能用

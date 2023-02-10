@@ -1,7 +1,7 @@
 ---
 title: python技巧积累
 date: 2022-05-25 09:42:46
-prev: ./python技巧积累.md  
+prev: ./深入python.md  
 next: false
 category:
 - python🐍
@@ -13,7 +13,7 @@ tag:
 :::
 <!-- more -->
 [[toc]]
-<div align="center"><h1><strong> python技巧积累</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> python技巧积累</strong></h2></div>
 
 🕊[python 进阶技能_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QE411u7vK)  
 [Python 进阶视频_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1jz411b7DH)  
@@ -100,5 +100,52 @@ player1:(3,1)
 循环记得打括号
 
 ## Pythonic
+pass 
+
+`#coding=utf-8`
+`#-*- coding: utf-8 -*-`
+
+一直搞不清楚这俩头什么区别。直觉上一样。今天特意查了一下，大致明白了：  
+对于python解释器来说，这两种写法一样。但是对于编辑器来讲，可能会出现识别问题。  
+  
+[参考PEP-0236](http://www.python.org/dev/peps/pep-0263/) Defining the Encoding
+::: details Click to see more
 
 
+    Python will default to ASCII as standard encoding if no other
+    encoding hints are given.
+
+    To define a source code encoding, a magic comment must
+    be placed into the source files either as first or second
+    line in the file, such as:
+
+          # coding=<encoding name>
+
+    or (using formats recognized by popular editors)
+
+          #!/usr/bin/python
+          # -*- coding: <encoding name> -*-
+
+    or
+
+          #!/usr/bin/python
+          # vim: set fileencoding=<encoding name> :
+
+    More precisely, the first or second line must match the regular
+    expression "coding[:=]\s*([-\w.]+)". The first group of this
+    expression is then interpreted as encoding name. If the encoding
+    is unknown to Python, an error is raised during compilation. There
+    must not be any Python statement on the line that contains the
+    encoding declaration.
+
+    To aid with platforms such as Windows, which add Unicode BOM marks
+    to the beginning of Unicode files, the UTF-8 signature
+    '\xef\xbb\xbf' will be interpreted as 'utf-8' encoding as well
+    (even if no magic encoding comment is given).
+
+    If a source file uses both the UTF-8 BOM mark signature and a
+    magic encoding comment, the only allowed encoding for the comment
+    is 'utf-8'.  Any other encoding will cause an error.
+:::
+ 
+ 

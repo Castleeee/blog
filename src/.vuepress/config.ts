@@ -8,5 +8,6 @@ export default defineUserConfig({
   theme,
   plugins:MyPlugin(),
   shouldPrefetch: false,
+
 });
 

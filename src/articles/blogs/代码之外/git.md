@@ -33,7 +33,7 @@ tag:
 **`git log (--oneline --all --graph ) `** 查看所有的提交记录，回滚需要至少7位id，-p查看提交具体干了啥,--all查看所有的分支，--graph 尽可能用图形表示。  
 **`git reflog `** 查看命令历史，以便确定要回到未来的哪个版本  
 **`git remote -v`** 查看你的远程仓库的路径  
-![](./static/git-images-1.png)
+![](./static/git_images_1.png)
 
 ### 基本的操作
 **`git clone Address `** 克隆项目  
@@ -86,7 +86,7 @@ rebase会在分支根提交点处接着提交，之后再跟上master该节点�
 **`git show (id or tag)`** 查看这次id和tag的详细信息，包括提交时间作者提交了啥等等  
 
 图解（源水印）  
-![800](./static/git-images-2.png)
+![800](./static/git_images_2.png)
 
 ### ignore语法
 史上最全的<a href='https://github.com/github/gitignore'>gitignore语法</a>模板  
@@ -115,7 +115,7 @@ passwd git
 git:x:502:504::/home/git:/bin/bash //找到这一行
 git:x:502:504::/home/git:/bin/git-shell//改为这个
 ```
-![](./static/git-images-3.png)
+![](./static/git_images_3.png)
 
 ### 添加公钥
 你也可以不添加直接ssh克隆,但是这样会每次都让你输入密码,只把开发记得公钥添加就行了  
@@ -125,7 +125,7 @@ ssh-keygen -t rsa -C "xxxxx@mail.com"
 //最后的又像是公钥里面显示的名字,自己开心就行
 ```
 这样在下就得到了一对公钥和私钥  
-![](./static/git-images-4.png)
+![](./static/git_images_4.png)
 
 编辑`id_rsa.pub`里面就是你的公钥复制下来  
 
@@ -168,12 +168,12 @@ git@192.168.0.100:/home/git/project1/test.git //SCP写法
 ssh://git@192.168.0.100/home/git/project1/test.git //SSH写法
 //Https的写法没有配置,而且每次都要输密码,团队协作不好用
 ```
-![](./static/git-images-5.png)
+![](./static/git_images_5.png)
 
 ## 工作流
 ### gitflow
 gitflow<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">工作流</a>，团队开发的范例。  
-![](./static/git-images-6.png)
+![](./static/git_images_6.png)
 
 中小型团队协作时候很重要  
 **大致注意下面这么几点**  
@@ -182,7 +182,7 @@ gitflow<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitf
 bitbucket提供免费私人5人无限制的私有仓库，gitlab和bitbucket提供精确到分支的权限控制,但bitbucket仍然是云托管，Gitlab占资源太大需要一个好服务器才行。
 ### github工作流
 
-![](./static/git-images-7.png)
+![](./static/git_images_7.png)
 
 主要流程为:
 - 新建分支（Create a branch）
@@ -197,11 +197,44 @@ bitbucket提供免费私人5人无限制的私有仓库，gitlab和bitbucket提�
 
 部署（Deploy）发生在合并（Merge）之前，这就是 GitHub flow 的核心，非阻塞式集成----在产生任何副作用之前得知当前修改的所有集成效果，达到真正的持续集成  
 体验一下Github开源软件如何PR和fork的工作模式<a href="https://help.github.com/en/github/getting-started-with-github/fork-a-repo">链接1</a> <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">链接2</a>
-### gitolite
-这个是用来管理的，可以精确控制分支读写权限，各种粒度都可以  
-不进行身份验证，仅是授权(官方原话)。  
 
-先鸽了
+### 多平台换行符问题(LF or CRLF)
+#### 问题
+**git提示code analyze的时候换行符是否要转换**  
+**文本文件所使用的换行符，在不同的系统平台上是不一样的**。UNIX/Linux 使用的是 `0x0A（LF）`，早期的 Mac OS 使用的是 `0x0D（CR）`，后来的 OS X 在更换内核后与 UNIX 保持一致了。但 DOS/Windows 一直使用 `0x0D0A（CRLF）` 作为换行符  
+在不同平台上，换行符发生改变时，Git 会认为整个文件被修改，这就造成我们没法 `diff`，不能正确反映本次的修改。  
+Git提供了一个 `autocrlf` 的配置项，用于在提交和检出时自动转换换行符  
+选项有三个：
+```shell
+# 提交时转换为LF，检出时转换为CRLF
+git config --global core.autocrlf true
+
+# 提交时转换为LF，检出时不转换
+git config --global core.autocrlf input
+
+# 提交检出均不转换
+git config --global core.autocrlf false
+```
+如果把 autocrlf 设置为 false 时，那另一个配置项 `safecrlf` 最好设置为 **ture**。该选项用于检查文件是否包含混合换行符，其有三个可选项：
+```shell
+# 拒绝提交包含混合换行符的文件
+git config --global core.safecrlf true
+
+# 允许提交包含混合换行符的文件
+git config --global core.safecrlf false
+
+# 提交包含混合换行符的文件时给出警告
+git config --global core.safecrlf warn
+```
+
+#### 解决方法
+直接无视然后提交，不转换不警告，这样会造成换行符混乱，diff可能会失效  
+```shell
+git config --global core.autocrlf false
+git config --global core.safecrlf false
+```
+另一种方法  
+
 
 ## 参考资料
 - [1 参 考](https://www.cnblogs.com/dee0912/p/5815267.html#_label8)

@@ -19,7 +19,7 @@ pyautogui.FAILSAFE=False#关闭文件安全
 记得引入pythoncom
 :::
 #TODO 需要整理一下
-### 速览
+### 速览Cheatsheet
 获取当前屏幕分辨率    
 
 screenWidth, screenHeight = pyautogui.size()    

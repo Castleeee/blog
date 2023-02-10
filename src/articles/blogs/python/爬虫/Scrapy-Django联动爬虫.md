@@ -12,6 +12,6 @@ tag:
 
 <!-- more -->
 
-<div align="center"><h1><strong> Scrapy-Django联动</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> Scrapy-Django联动</strong></h2></div>
 
 

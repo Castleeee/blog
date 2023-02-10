@@ -13,7 +13,7 @@ tag:
 
 [[toc]]
 
-<div align="center"><h1><strong> python库</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> python库</strong></h2></div>
 
 ## collections
 首当其冲，这个高性能扩展数据类型库是每一个pythoner必须的  
@@ -53,15 +53,16 @@ print(a)
 ^ff28bf
 
 提前把函数的参数固定住，配合闭包看  
-#TODO 
 ### cache
 加速缓存
 ## itertools
 用于更好遍历和封装的库
+#todo
+itertools.groupby数组只会去相邻的重，groupby的本质是使用前使用前先排序
+[【python技巧059】用itertools处理各种花样的迭代_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV19V4y1F7if)
 ## time和date库
 ### 测试程序性能
 ### arrow
-## python测试和日志
 ## try-except的使用规范
 
 ## 哈希
@@ -78,7 +79,7 @@ pywifi
 paramiko
 
 ## 有趣的包
-### tqdm
+### tqdm进度条
 提供文本动画进度条，使用方法：
 
 ```Python
@@ -94,12 +95,3 @@ for i in tqdm(range(1000)):
 
 #### pycallgraph
 #### code2flow
-
-## 数据类
-### pydantic库
-pydantic比dataclass以及其他方法都慢得多，无论是在创建还是在修改的时候，pydantic因为在runtime会进行解析，创建需要5400ns，但例如tuple只需要30ns，慢了一百八十倍。dataclass需要250ns，慢了21倍。
-### dataclass
-将类添加常用的属性
-
-## SQLAlchemy
-类似于django的module，原生连接数据库查询和存储

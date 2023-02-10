@@ -9,7 +9,7 @@ tag:
 ---
 
 <!-- more -->
-<div align="center"><h1><strong> twitter爬虫</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> twitter爬虫</strong></h2></div>
 
 
 推特反爬机制稍微严一些，但是也不是很难突破。

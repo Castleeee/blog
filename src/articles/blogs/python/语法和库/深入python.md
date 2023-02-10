@@ -18,7 +18,7 @@ tag:
 
 
 
-<div align="center"><h1><strong> 深入python</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> 深入python</strong></h2></div>
 
 ## GC原理剖析
 
@@ -32,11 +32,6 @@ tag:
 ### 环形数据结构
 著名的环形引用
 [Python 如何在环状数据结构中管理内存 - i'm jackey - i'm jackey](https://ijackey.com/python-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%8E%AF%E7%8A%B6%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%AD%E7%AE%A1%E7%90%86%E5%86%85%E5%AD%98-956.html)
-
-## 大数据技巧
-#TODO 早晚有一天移动到大数据
-### 布隆过滤器
-实现 
 
 ## 普通技巧
 ## 网络编程详解
@@ -108,3 +103,7 @@ end sleep 4
 ### 多进程异步
 
 ## 混合编程
+
+## 热加载
+#todo
+python程序的热加载还是程序的热加载？

@@ -12,6 +12,6 @@ tag:
 
 <!-- more -->
 
-<div align="center"><h1><strong> Scrapy-redis分布式爬虫</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> Scrapy-redis分布式爬虫</strong></h2></div>
 
 

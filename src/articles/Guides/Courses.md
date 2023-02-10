@@ -12,9 +12,6 @@ editLink: false
 comment: false
 ---
 
-<style type="text/css">  
-html body div.page-title { display: none}  
-</style>
 
 <br/>
 

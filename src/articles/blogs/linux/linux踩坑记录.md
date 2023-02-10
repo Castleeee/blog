@@ -5,12 +5,14 @@ category:
 - linux🐧
 tag:
 - linux🐧
-- 踩坑
+- 踩坑记录
 ---
 
 <!-- more -->
-<div align="center"><h1><strong> 踩坑记录</strong></h1></div>
+<div align="center" style="font-size:1.4em;"><h2><strong> 踩坑记录</strong></h2></div>
 
+
+[常见的Shell大坑 – 呀哈哈的咿咿呀呀](https://chen3961.github.io/2019/06/10/Ten-black-hole-in-bash/)
 
 ## linux出现ssl错误
 使用pip安装包的时候发现ssl错误，怀疑是openssl的问题。排查证书发现都在，没问题。  
@@ -20,3 +22,19 @@ date hwclock查看一下，硬件时间与本地时间差30分钟。
 `date -s 17:55:55`将系统时间设定成下午5点55分55秒的命令  
 `hwclock -w` 将当前时间和日期写入BIOS，避免重启后失效  
 调整好时间后正常了  
+
+
+## wc -l mac下会出现奇怪空格
+
+wc 命令统计指定文件中的字节数、字数、行数，并将统计结果显示输出。该命令统计指定文件中的字节数、字数、行数。如果没有给出文件名，则从标准输入读取。wc同时也给出所指定文件的总统计数。  
+```shell
+wc 
+-c 统计字节数。
+-l 统计行数。
+-m 统计字符数。这个标志不能与 -c 标志一起使用。
+-w 统计字数。一个字被定义为由空白、跳格或换行字符分隔的字符串。
+-L 打印最长行的长度。
+```
+wc -l 的时候发现无法取到信息而是空，发现输出前面有7个空格`       1 a`而在linux为`1 a` 注意这个坑
+
+
